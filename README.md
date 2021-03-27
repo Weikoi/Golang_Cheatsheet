@@ -122,8 +122,7 @@ Go语言新手入门
     var a String = "Hello"
     b := "Golang"
 
-
-​    
+    
 1-3 复合数据类型
 
     //数组
@@ -135,11 +134,25 @@ Go语言新手入门
     
     
     //切片
-    //切片代表变长的序列，序列中每个元素都有相同的类型。
+    //切片代表变长的序列，序列中每个元素都有相同的类型, 一个slice由三个部分构成：指针、长度和容量。。
     //切片不可使用==来比较，只能用for循环展开，逐个比较
-    
+    months := [...]string{1: "January",/* ... */, 12: "December"}
     
     //Map
+    无序的key/value对的集合
+    创建
+    ages := make(map[string]int)
+    ages["alice"] = 31
+    ages["charlie"] = 34
+    或者
+    ages := map[string]int{
+    "alice": 31,
+    "charlie": 34,
+    }
+    ages["bob"] = 18  # 增加值
+    ages["alice"] = 32  # 改值
+    fmt.Println(ages["alice"]) # 取值
+    delete(ages, "alice")  # 删值
     
     
     //结构体
@@ -164,3 +177,5 @@ printf 格式化打印
 
 
 指针
+
+golang模拟队列，模拟栈
