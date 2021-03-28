@@ -96,7 +96,8 @@ Go语言新手入门
 
     //整数类型
     //Golang分为有符号和无符号两种类型的整数。有int8、int16、int32和int64四种不同大小的有符号整数类型，与此对应的是uint8、uint16、uint32和uint64四种无符号整数类型。
-    
+    //byte // uint8 的别名,表示一个字节
+    //rune // int32 的别名,表示一个 Unicode 码点
     var a uint8 = 255
     b := 100
     
@@ -157,7 +158,15 @@ Go语言新手入门
     
     //结构体
     //结构体是一种聚合的数据类型，是由零个或多个任意类型的值聚合成的实体。每个值称为结构体的成员。
+    type Employee struct {
+    	ID int
+    	Name string
+    	Address string
+    	Birthday time.Time
+    	Salary int
     
+    }
+    var alfred Employee
     
     //
     
@@ -170,6 +179,7 @@ Go语言新手入门
 
 
 
+输入
 
 
 
@@ -179,3 +189,18 @@ printf 格式化打印
 指针
 
 golang模拟队列，模拟栈
+
+
+===============================================================
+
+为什么说Golang是一门傻逼语言？
+
+1. 没有类，面向对象设计写得很难受
+
+2. 反人类的错误处理机制，写if err != nil写到想骂街
+
+3. 没有原生set，这么常用的collection都没有？
+
+4. map取不存在的key返回0，什么智障设计？？？
+
+
